@@ -7,10 +7,35 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <audio id="audio" autoplay>
+        <source src="begging.mp3" type="audio/mp3">
+        <source src="/Audio/begging.mp3" type="audio/mp4">
+    </audio>
     <h1>Feliz cumpleaños</h1> 
-    <h2>Aleja</h2>
+    <h2>Hermosa</h2>
     <canvas id="birthday"></canvas>
+    <img src="satoruc1.jpg">
 
     <script src="index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('audio');
+  
+            // Agrega un evento de clic al documento
+            document.addEventListener('click', function() {
+                // Verifica si el audio ya está pausado o detenido
+                if (audio.paused || audio.ended) {
+                    // Inicia la reproducción del audio
+                    audio.play();
+                }
+            });
+  
+            audio.addEventListener('ended', function() {
+                // Reinicia la reproducción del audio
+                audio.currentTime = 0; // Reinicia la reproducción al principio
+                audio.play(); // Reproduce el audio nuevamente
+            }); 
+        });
+    </script>
 </body>
 </html>

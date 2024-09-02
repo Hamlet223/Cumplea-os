@@ -28,3 +28,11 @@ body {
     -webkit-user-select: none;
     user-select: none;
   }
+
+  img {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    left: 42%;
+    margin-top: -100px;
+  }
