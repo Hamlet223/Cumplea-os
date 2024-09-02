@@ -2,6 +2,7 @@ body {
   margin: 0;
   background: #020202;
   cursor: crosshair;
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
 }
 
 canvas {
@@ -18,6 +19,9 @@ h1, h2 {
   font-weight: 800;
   -webkit-user-select: none;
   user-select: none;
+  text-align: center; /* Asegura que el texto esté centrado */
+  max-width: 100%; /* Evita que el texto se desborde */
+  white-space: nowrap; /* Evita que el texto se divida en dos líneas */
 }
 
 h1 {
@@ -35,6 +39,7 @@ img {
   left: 50%;
   transform: translateX(-50%);
   margin-top: -100px;
+  max-width: 100%; /* Asegura que la imagen no se desborde */
 }
 
 @media (max-width: 768px) {
@@ -44,6 +49,7 @@ img {
 
   img {
       width: 50vw; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+      margin-top: -50px; /* Ajusta la posición para pantallas pequeñas */
   }
 }
 
